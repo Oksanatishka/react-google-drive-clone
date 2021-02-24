@@ -1,0 +1,33 @@
+> cd google-drive-clone-live 
+> npx create-react-app .
+
+Setup Firebase.
+    - Authentification: turn Google on.
+    - Cloud Firestore: Create database -> test mode
+    - Project Seetings: copy config
+
+Cleanup.
+
+App
+    Header
+    Sidebar | FilesView | SideIcons
+
+Create:
+    /src/components/header/index.js
+    /src/styles/Header.css
+    /src/media
+
+Material-UI:
+    > npm install @material-ui/core
+    > npm install @material-ui/icons
+    // Error in Terminal: Cannot read property 'match' of undefined 
+        -> remove package-lock.json 'rm -rf package-lock.json ', then try to install again.
+    // Error in Terminal: Module not found: Can't resolve '.../node_modules/babel-loader/lib/index.js'
+        > npm install -D babel-loader @babel/core @babel/preset-env
+
+> yarn add firebase firebase-tools
+Use all from /src/firebase.js in /src/components/sidebar/NewFile.js
+Modal // taken from MaterialUI https://material-ui.com/components/modal/#modal
+
+Firebase Console -> Storage -> Rules tab -> delete 'if request.auth != null'
+Find all files from uploading in Firebase Storage.
